@@ -17,6 +17,7 @@ const commander_1 = require("commander");
 const local_api_1 = require("local-api");
 const path_1 = __importDefault(require("path"));
 const process_1 = require("process");
+const isProduction = process.env.NODE_ENV === "production";
 exports.serveCommand = new commander_1.Command()
     .command("serve [filename]")
     .description("Open a file for editing")
@@ -27,7 +28,7 @@ exports.serveCommand = new commander_1.Command()
     };
     try {
         const dir = path_1.default.join((0, process_1.cwd)(), filename);
-        yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir);
+        yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir, !isProduction);
         console.log(`Opened ${filename}. Navigate to http://localhost:${options.port} to edit`);
     }
     catch (err) {
