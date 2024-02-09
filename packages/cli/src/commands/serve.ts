@@ -18,7 +18,7 @@ export const serveCommand = new Command()
       return typeof err.code === "string";
     };
     try {
-      const dir = path.join(cwd(), filename);
+      const dir = path.join(cwd(), path.dirname(filename));
       await serve(
         parseInt(options.port),
         path.basename(filename),
