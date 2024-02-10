@@ -1,6 +1,6 @@
 {
-  "name": "js-journal",
-  "version": "1.0.0",
+  "name": "js-berry-journal",
+  "version": "1.0.2",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -17,13 +17,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@js-journal/local-client": "^0.1.0"
+    "@js-journal/local-client": "^1.0.1"
   },
   "devDependencies": {
-    "@js-journal/local-api": "^1.0.0",
-    "commander": "^12.0.0",
+    "@js-berry-journal/local-api": "^1.0.2",
     "@types/node": "^20.11.16",
+    "commander": "^12.0.0",
     "esbuild": "0.8.26",
     "typescript": "^5.3.3"
-  }
+  },
+  "gitHead": "ec6352417c994231a1d9e0c3b8dc2f3c2e1a7afd"
 }
